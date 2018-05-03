@@ -15,6 +15,25 @@ void render() {
 
   // Render logic gates ..
 
+  switch (selection.item) {
+
+    case 0 ... 11:
+      Sprites::drawSelfMasked(highlight_X[column(selection.item)], highlight_Y[selection.item], gateHighlight, 0);
+      Sprites::drawOverwrite(123, 44, menu, 0);
+      break;
+
+    case SELECTED_MENU:
+      if (gameState == GameState::GamePlay) Sprites::drawOverwrite(122, 38, menuSelect, 0);
+      break;
+
+    default: break;
+
+  }
+
+  
+
+  // Render logic gates ..
+
   Sprites::drawSelfMasked(highlight_X[column(selection.item)], highlight_Y[selection.item], gateHighlight, 0);
 
 

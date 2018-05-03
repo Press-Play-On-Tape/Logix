@@ -55,6 +55,10 @@ void loop() {
         GamePlay();
         break;
 
+    case GameState::GameMenu:
+        GameMenu();
+        break;
+        
   }
 
   arduboy.display(CLEAR_BUFFER);

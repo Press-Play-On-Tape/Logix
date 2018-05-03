@@ -18,6 +18,7 @@
 #define CONNECTOR_OUTPUT  2
 
 #define COUNTER_DELAY_SHORT 40
+#define SELECTED_MENU 12
 
 static const uint8_t LOGIC_GATES_SIZE = 10;
 
@@ -44,6 +45,7 @@ enum class GameState : uint8_t {
 
   LevelInit,
   GamePlay,
+  GameMenu
 
 };
 

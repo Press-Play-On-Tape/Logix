@@ -11,6 +11,17 @@ void GamePlay() {
   displayConnectorSelect = false;
 
 
+  //----------------------------------------------------------------------------------------------------------------------
+  // Has the user selected the menu?
+
+  if (selection.item == SELECTED_MENU && arduboy.justPressed(A_BUTTON)) { 
+  
+    gameState = GameState::GameMenu; 
+      
+  }
+
+
+
   // Handle simple navigation around the screen ..
   
   if (!arduboy.pressed(B_BUTTON) && !arduboy.justReleased(B_BUTTON) && !arduboy.pressed(A_BUTTON) && !arduboy.justReleased(A_BUTTON)) {
@@ -22,10 +33,12 @@ void GamePlay() {
 
     }
 
-    if (arduboy.justPressed(LEFT_BUTTON) && selection.item > 2)         { selection.item = selection.item - 3; }
-    else if (arduboy.justPressed(LEFT_BUTTON))                          { selection.item = 9; }
+    if (arduboy.justPressed(LEFT_BUTTON) && selection.item > 2 && selection.item != SELECTED_MENU)   { selection.item = selection.item - 3; clearStatus(&selection, &currentConnector); }
+    else if (arduboy.justPressed(LEFT_BUTTON) && selection.item == SELECTED_MENU)  { selection.item = 9; clearStatus(&selection, &currentConnector); }
 
-    if (arduboy.justPressed(RIGHT_BUTTON) && selection.item < 9)        { selection.item = selection.item + 3; }
+    if (arduboy.justPressed(RIGHT_BUTTON) && selection.item < 9)               { selection.item = selection.item + 3; clearStatus(&selection, &currentConnector); }
+    else if (arduboy.justPressed(RIGHT_BUTTON) && selection.item >= 9)         { selection.item = SELECTED_MENU; clearStatus(&selection, &currentConnector); }
+
 
   }
 
