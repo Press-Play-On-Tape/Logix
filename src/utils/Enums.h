@@ -17,6 +17,7 @@
 #define CONNECTOR_INPUT_B  1
 #define CONNECTOR_OUTPUT  2
 
+#define COUNTER_DELAY 75
 #define COUNTER_DELAY_SHORT 40
 #define SELECTED_MENU 12
 
@@ -43,6 +44,8 @@ constexpr inline const __FlashStringHelper * FlashString(const char * flashStrin
 
 enum class GameState : uint8_t {
 
+  IntroInit,
+  Intro,
   LevelInit,
   GamePlay,
   GameMenu

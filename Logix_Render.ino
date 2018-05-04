@@ -30,7 +30,7 @@ void render() {
 
   }
 
-  
+
 
   // Render logic gates ..
 
@@ -111,3 +111,19 @@ void render() {
 
 }
 
+
+
+
+// --------------------------------------------------------------------------------------
+//  Render cross hatch effect.  Counter range 0 - 32 ..
+//
+void renderCrossHatch(uint8_t counter) {
+
+  for (uint8_t x = counter; x < 32; x++) {
+
+    arduboy.drawHorizontalDottedLine((x%2), 128, x, BLACK);
+    arduboy.drawHorizontalDottedLine((x%2), 128, 63 - x, BLACK);
+    
+  }
+
+}

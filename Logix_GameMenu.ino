@@ -118,6 +118,11 @@ void GameMenu() {
       }
       break;
 
+      case 4:
+        menuSelection0 = 0;
+        menuSelection1 = 0;
+        gameState = GameState::IntroInit;
+        break;
   }
 
 
