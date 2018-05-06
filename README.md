@@ -2,9 +2,7 @@
 
 Logix is an educational game that teaches the basic logic gates used in digital electronics.  Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!
 
-![Game_00|256x128](https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_00.png)&nbsp;&nbsp;&nbsp;![Game_01|256x128](https://community.arduboy.com/uploads/arduboy/original/2X/a/e7nRAO3IJzQnSuEPFmAfxcIVx7w.png)
-
-![animation|256x128](https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_01.png)&nbsp;&nbsp;&nbsp;![RefreshBrowser|256x128](https://community.arduboy.com/uploads/arduboy/original/2X/a/jNUBhoi6adkCSEdDbCkwvh7yPQ7.png)
+![](https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_00.png | width=256)&nbsp;&nbsp;&nbsp;![](https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_01.png | width=256)
 <br />
 
 ## What are Logic Gates?
