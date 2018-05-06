@@ -656,11 +656,15 @@ void clearStatus(Selection *selection, Connector *currentConnector) {
 //
 bool islevelFullyWired(Level *level, Connector connectors[] ) {
 
+  bool oneGateUsed = false;
+
   for (uint8_t y = 0; y < NUMBER_OF_GATES; y++) {
 
     Gate *gate = &level->items[y];
 
     if (gate->type != ItemType::BLANK) { 
+
+      if (y >= 3 && y <= 8) oneGateUsed = true;
 
       bool inputA = false;
       bool inputB = false;
@@ -693,6 +697,6 @@ bool islevelFullyWired(Level *level, Connector connectors[] ) {
 
   }
 
-  return true;
+  return oneGateUsed;
 
 }
