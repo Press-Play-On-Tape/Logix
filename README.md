@@ -122,9 +122,9 @@ Most elements of the game have two input on the left-hand side of the element an
 
 Releasing and repressing the A button will toggle between the three modes shown below.
 
-<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_03_1.png" width="32px">&nbsp;&nbsp;&nbsp;The first mode will allow you to wire from the first input of the element to another element.</td>
-<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_03_2.png" width="32px">&nbsp;&nbsp;&nbsp;The second mode will allow you to wire from the second input of an element to another element.
-<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_03_3.png" width="32px">&nbsp;&nbsp;&nbsp;A final release and press of the A button will reveal the output 
+<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_03_1.png" width="32px">&nbsp;&nbsp;&nbsp;The first mode will allow you to wire from the first input of the element to another element.<br />
+<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_03_2.png" width="32px">&nbsp;&nbsp;&nbsp;The second mode will allow you to wire from the second input of an element to another element.<br />
+<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_03_3.png" width="32px">&nbsp;&nbsp;&nbsp;A final release and press of the A button will reveal the output <br />
 
 Back to our example.  When we started the game, it showed two elements – a switch on the left-hand side and an LED on the right.  Running across the top and down the left-hand side of the screen is a positive rail – running across the bottom and inset slightly from the left-hand side is a negative rail.
 
