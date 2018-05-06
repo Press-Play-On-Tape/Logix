@@ -5,6 +5,8 @@ Logix is an educational game that teaches the basic logic gates used in digital 
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_00.png" width="256px">&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_01.png" width="256px">
 <br />
 
+<a name="toc" />
+
 ### Table of Contents
 [What are Logic Gates?](#a) <br />
 [Aim of the Game](#b) <br />
@@ -87,6 +89,8 @@ The XNOR (exclusive-NOR) gate is a combination XOR gate followed by an inverter.
 Using combinations of logic gates, complex operations can be performed. 
 Source https://whatis.techtarget.com
 <br />
+
+[Back to top](toc)
 
 ---
 
