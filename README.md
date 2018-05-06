@@ -92,6 +92,8 @@ Source https://whatis.techtarget.com
 
 [Back to top](#toc)
 
+<p dir='rtl' align='right'> [Back to top](#toc) </p>
+
 ---
 
 <a name="b"/>
