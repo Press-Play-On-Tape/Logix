@@ -6,22 +6,23 @@ Logix is an educational game that teaches the basic logic gates used in digital 
 <br />
 
 ### Table of Contents
-[What are Logic Gates?](#a)
-[Aim of the Game](#b)
-[A Walkthrough](#c)
-[Highlighting a Square](#d)
-[Wiring Elements Together](#e)
-[Adding new Elements](#f)
-[Checking your Circuit](#g)
-[Completing the Puzzle](#h)
-[Proceeding to the Next Puzzle](#i)
-[Other Hints and Tips](#j)
+[What are Logic Gates?](#a) <br />
+[Aim of the Game](#b) <br />
+[A Walkthrough](#c) <br />
+[Highlighting a Square](#d) <br />
+[Wiring Elements Together](#e) <br />
+[Adding new Elements](#f) <br />
+[Checking your Circuit](#g) <br />
+[Completing the Puzzle](#h) <br />
+[Proceeding to the Next Puzzle](#i) <br />
+[Other Hints and Tips](#j) <br />
 
 <br />
 
 ---
 
 <a name="a"/>
+
 ## What are Logic Gates?
 
 A logic gate is an elementary building block of a digital circuit. Most logic gates have two inputs and one output. At any given moment, every terminal is in one of the two binary conditions low (0) or high (1), represented by different voltage levels. The logic state of a terminal can, and generally does, change often, as the circuit processes data. In most logic gates, the low state is approximately zero volts (0 V), while the high state is approximately five volts positive (+5 V).
@@ -90,6 +91,7 @@ Source https://whatis.techtarget.com
 ---
 
 <a name="b"/>
+
 ## Aim of the Game
 
 Logix presents the player with a series of puzzles that test your knowledge of the basic logic gates.  By wiring switches on the left of the playing field to various logic gates you can control the LEDs on the right hand side of the screen.  By alternating the switch positions between on and off, the LEDs will turn on and off based on the logic you have implemented. 
@@ -124,6 +126,7 @@ Finally, moving all switches to the up / high / on position turns the top two LE
 
 
 <a name="c"/>
+
 ## A Walkthrough
 
 Take the example puzzle below which involves one switch and one LED.  When the switch is off, the LED should be on and vice-versa.  This is an example of a simple NOT circuit and makes a great starting point to learn the game.
@@ -132,11 +135,13 @@ Take the example puzzle below which involves one switch and one LED.  When the s
 <br />
 
 <a name="d"/>
+
 ### Highlighting a Square
 The selected element or gate can be changed by scrolling using the Up, Down, Left and Right buttons.  You can navigate to blank spots within the puzzle and add logic gates.  This is shown later on.
 <br />
 
 <a name="e"/>
+
 ### Wiring Elements Together
 
 Most elements of the game have two input on the left-hand side of the element and a single out on the right.  The logical NOT gate and the LED are the exceptions.  The inputs and output of the selected element can be wired by pressing and holding the A button.  An indicator on the upper right-hand side of the screen will indicate which of the inputs or output you are about to wire.
@@ -169,6 +174,7 @@ Repeat the process to connect the lower switch input to the negative rail.
 <br />
 
 <a name="f"/>
+
 ### Adding new Elements
 
 The board allows you to add up to six logic gates (in two columns of three) into each puzzle.  To add an element, highlight a vacant cell and press and hold the B button.  An up / down indicator will be shown in the upper right-hand side of the screen.
@@ -200,6 +206,7 @@ Once the NOT gate is selected, the remainder of the wiring can be laid.  Wire th
 
 
 <a name="g"/>
+
 ### Checking your Circuit
 
 After completing the wiring, we can test the results against the initial puzzle outcomes.  If you recall, the original criteria was simple – when the switch is down or off, the LED is on.  When the switch is up (or on) the LED is off.  The original screen is shown below to remind you.
@@ -221,6 +228,7 @@ Our tests have shown that when the switch is on, the LED is off.  Conversely, wh
 <br />
 
 <a name="h"/>
+
 ### Completing the Puzzle
 
 Now that we appear to have completed the puzzle, we can check our results by navigating to the Menu option in the lower right-hand side of the screen.
@@ -252,6 +260,7 @@ The ‘Back’ option will take you back to the game.  The ‘Quit’ option wil
 <br />
 
 <a name="i"/>
+
 ## Proceeding to the Next Puzzle
 
 Once you have successfully completed the current puzzle, return to the game play.  You will be prompted to continue to the next level if you are ready.  Selecting ‘Y’ to continue of ‘N’ to remain on the current level and review your handiwork. When you do decide to move on, navigate back to the ‘Test’ menu and re-evaluate your solution.
@@ -260,6 +269,7 @@ Once you have successfully completed the current puzzle, return to the game play
 <br />
 
 <a name="j"/>
+
 ## Other Hints and Tips
 
 * Levels are saved in the EEPROM.  You can reset the saved levels by pressing and holding the Up and Down buttons simultaneously for 3 or 4 seconds whilst on the title screen.
