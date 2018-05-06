@@ -9,8 +9,9 @@ Logix is an educational game that teaches the basic logic gates used in digital 
 [What are Logic Gates?](#a) <br />
 [Aim of the Game](#b) <br />
 [A Walkthrough](#c) <br />
-[Highlighting a Square](#d) <br />
-[Wiring Elements Together](#e) <br />
+.&nbsp;&nbsp;[Highlighting a Square](#d) <br />
+
+&nbsp;&nbsp;[Wiring Elements Together](#e) <br />
 [Adding new Elements](#f) <br />
 [Checking your Circuit](#g) <br />
 [Completing the Puzzle](#h) <br />
