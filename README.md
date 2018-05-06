@@ -90,7 +90,7 @@ Using combinations of logic gates, complex operations can be performed.
 Source https://whatis.techtarget.com
 <br />
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#toc)
+[Back to top](#toc)
 
 ---
 
@@ -128,6 +128,7 @@ Finally, moving all switches to the up / high / on position turns the top two LE
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_24a.png" width="256px">
 <br />
 
+[Back to top](#toc)
 
 <a name="c"/>
 
@@ -138,11 +139,15 @@ Take the example puzzle below which involves one switch and one LED.  When the s
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_02.png" width="256px">
 <br />
 
+[Back to top](#toc)
+
 <a name="d"/>
 
 ### Highlighting a Square
 The selected element or gate can be changed by scrolling using the Up, Down, Left and Right buttons.  You can navigate to blank spots within the puzzle and add logic gates.  This is shown later on.
 <br />
+
+[Back to top](#toc)
 
 <a name="e"/>
 
@@ -177,6 +182,8 @@ Repeat the process to connect the lower switch input to the negative rail.
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_05.png" width="256px">
 <br />
 
+[Back to top](#toc)
+
 <a name="f"/>
 
 ### Adding new Elements
@@ -208,6 +215,7 @@ Once the NOT gate is selected, the remainder of the wiring can be laid.  Wire th
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_10.png" width="256px">
 <br />
 
+[Back to top](#toc)
 
 <a name="g"/>
 
@@ -230,6 +238,8 @@ Our tests have shown that when the switch is on, the LED is off.  Conversely, wh
 
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_12.png" width="256px">
 <br />
+
+[Back to top](#toc)
 
 <a name="h"/>
 
@@ -263,6 +273,8 @@ The ‘Help’ option displays the various logic gates used in the puzzles with 
 The ‘Back’ option will take you back to the game.  The ‘Quit’ option will return you to the title screen.
 <br />
 
+[Back to top](#toc)
+
 <a name="i"/>
 
 ## Proceeding to the Next Puzzle
@@ -271,6 +283,8 @@ Once you have successfully completed the current puzzle, return to the game play
 
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_18.png" width="256px">
 <br />
+
+[Back to top](#toc)
 
 <a name="j"/>
 
@@ -296,7 +310,8 @@ Once you have successfully completed the current puzzle, return to the game play
 * Logic gates that are placed as part of the puzzle cannot be changed.  When pressing the B button, the Up / Down indicator in the top, right-hand side of the screen is replaced with a padlock.
 
    <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_22.png" width="256px">
-   
+      
 <br />
+[Back to top](#toc)
 
 
