@@ -649,3 +649,50 @@ void clearStatus(Selection *selection, Connector *currentConnector) {
   currentConnector->reset();
 
 }
+
+
+// --------------------------------------------------------------------------------------
+//  Are all gates in the game fully wired ..
+//
+bool islevelFullyWired(Level *level, Connector connectors[] ) {
+
+  for (uint8_t y = 0; y < NUMBER_OF_GATES; y++) {
+
+    Gate *gate = &level->items[y];
+
+    if (gate->type != ItemType::BLANK) { 
+
+      bool inputA = false;
+      bool inputB = false;
+      bool output = false;
+
+      if (gate->type == ItemType::NOT) { inputB = true; }
+      if (gate->type == ItemType::LED) { inputB = true; output = true; }
+
+      for (uint8_t x = 0; x < NUMBER_OF_CONNECTORS; x++) {
+
+        Connector *connector = &connectors[x];
+
+        if (connector->active) {
+
+          if (connector->fromItem == y)                                            output = true;
+          if (connector->toItem == y && connector->toInput == CONNECTOR_INPUT_A)   inputA = true;
+          if (connector->toItem == y && connector->toInput == CONNECTOR_INPUT_B)   inputB = true;
+
+        }
+
+      }
+
+      if (!inputA || !inputB || !output) {
+
+        return false;
+
+      }
+
+    }
+
+  }
+
+  return true;
+
+}

@@ -14,6 +14,11 @@ const uint8_t y[] = { 4, 13, 22, 31, 43 };
 
 void GameMenu() {
 
+  bool islevelWiredCompletely = islevelFullyWired(&level, connectors);
+
+  if (!islevelWiredCompletely && menuSelection0 == 1) menuSelection0 = 0;
+
+
   render();
   
   arduboy.fillRect(0, 0, 40, 55, BLACK);
@@ -28,6 +33,12 @@ void GameMenu() {
   font4x6.setTextColor(BLACK);
   font4x6.setCursor(8, y[menuSelection0]);
   arduboy.fillRect(4, y[menuSelection0], 32, 8, WHITE);
+
+  if (!islevelWiredCompletely) {
+
+    Sprites::drawOverwrite(30, 13, padlock, 0);
+
+  }
 
 
   // Top level seelection ..
@@ -187,9 +198,26 @@ void GameMenu() {
 
   // Handle keypresses ..
 
-  if (arduboy.justPressed(UP_BUTTON) && menuSelection0 > 0 && menuSelection1 == 0)      { menuSelection0--; }
+  if (arduboy.justPressed(UP_BUTTON) && menuSelection0 > 0 && menuSelection1 == 0)      { 
+    if (menuSelection0 == 2 && !islevelWiredCompletely) {
+      menuSelection0 = 0; 
+    }
+    else {
+      menuSelection0--; 
+    }
+  }
+
   if (arduboy.justPressed(UP_BUTTON) && menuSelection1 == 3)                            { gateIndex++; if (gateIndex == ItemType::BLANK) gateIndex = ItemType::AND; }
-  if (arduboy.justPressed(DOWN_BUTTON) && menuSelection0 < 4 && menuSelection1 == 0)    { menuSelection0++; }
+
+  if (arduboy.justPressed(DOWN_BUTTON) && menuSelection0 < 4 && menuSelection1 == 0)    { 
+    if (menuSelection0 == 0 && !islevelWiredCompletely) {
+      menuSelection0 = 2; 
+    }
+    else {
+      menuSelection0++; 
+    }
+  }
+
   if (arduboy.justPressed(DOWN_BUTTON) && menuSelection1 == 3)                          { gateIndex--; if (gateIndex == ItemType::BLANK) gateIndex = ItemType::NOT; }
 
   if (arduboy.justPressed(RIGHT_BUTTON) && menuSelection0 == 2 && menuSelection1 == 0)  { menuSelection1 = 2; }
