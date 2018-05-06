@@ -2,7 +2,7 @@
 
 Logix is an educational game that teaches the basic logic gates used in digital electronics.  Once you have completed some introductory puzzles that feature a single gate each, you can move on to harder puzzles that test your learning!
 
-![](https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_00.png width="256px")&nbsp;&nbsp;&nbsp;![](https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_01.png width="256px")
+<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_00.png" width="256px">&nbsp;&nbsp;&nbsp;<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_01.png" width="256px">
 <br />
 
 ## What are Logic Gates?
