@@ -132,6 +132,8 @@ Finally, moving all switches to the up / high / on position turns the top two LE
 
 <a name="c"/>
 
+---
+
 ## A Walkthrough
 
 Take the example puzzle below which involves one switch and one LED.  When the switch is off, the LED should be on and vice-versa.  This is an example of a simple NOT circuit and makes a great starting point to learn the game.
@@ -143,6 +145,8 @@ Take the example puzzle below which involves one switch and one LED.  When the s
 
 <a name="d"/>
 
+---
+
 ### Highlighting a Square
 The selected element or gate can be changed by scrolling using the Up, Down, Left and Right buttons.  You can navigate to blank spots within the puzzle and add logic gates.  This is shown later on.
 <br />
@@ -150,6 +154,8 @@ The selected element or gate can be changed by scrolling using the Up, Down, Lef
 [Back to top](#toc)
 
 <a name="e"/>
+
+---
 
 ### Wiring Elements Together
 
@@ -186,6 +192,8 @@ Repeat the process to connect the lower switch input to the negative rail.
 
 <a name="f"/>
 
+---
+
 ### Adding new Elements
 
 The board allows you to add up to six logic gates (in two columns of three) into each puzzle.  To add an element, highlight a vacant cell and press and hold the B button.  An up / down indicator will be shown in the upper right-hand side of the screen.
@@ -219,6 +227,8 @@ Once the NOT gate is selected, the remainder of the wiring can be laid.  Wire th
 
 <a name="g"/>
 
+---
+
 ### Checking your Circuit
 
 After completing the wiring, we can test the results against the initial puzzle outcomes.  If you recall, the original criteria was simple – when the switch is down or off, the LED is on.  When the switch is up (or on) the LED is off.  The original screen is shown below to remind you.
@@ -242,6 +252,8 @@ Our tests have shown that when the switch is on, the LED is off.  Conversely, wh
 [Back to top](#toc)
 
 <a name="h"/>
+
+---
 
 ### Completing the Puzzle
 
@@ -277,6 +289,8 @@ The ‘Back’ option will take you back to the game.  The ‘Quit’ option wil
 
 <a name="i"/>
 
+---
+
 ## Proceeding to the Next Puzzle
 
 Once you have successfully completed the current puzzle, return to the game play.  You will be prompted to continue to the next level if you are ready.  Selecting ‘Y’ to continue of ‘N’ to remain on the current level and review your handiwork. When you do decide to move on, navigate back to the ‘Test’ menu and re-evaluate your solution.
@@ -287,6 +301,8 @@ Once you have successfully completed the current puzzle, return to the game play
 [Back to top](#toc)
 
 <a name="j"/>
+
+---
 
 ## Other Hints and Tips
 
