@@ -87,6 +87,9 @@ Source https://whatis.techtarget.com
 
 <a name="b"/>
 
+<br />
+
+
 ## Aim of the Game
 
 Logix presents the player with a series of puzzles that test your knowledge of the basic logic gates.  By wiring switches on the left of the playing field to various logic gates you can control the LEDs on the right hand side of the screen.  By alternating the switch positions between on and off, the LEDs will turn on and off based on the logic you have implemented. 
