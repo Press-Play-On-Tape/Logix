@@ -6,6 +6,7 @@
 #include "src/fonts/Font4x6.h"
 #include "src/utils/Data.h"
 #include "src/utils/Puzzles.h"
+#include "src/utils/EEPROM_Utils.h"
 #include "src/sounds/sounds.h"
 
 Arduboy2Ext arduboy;
@@ -22,6 +23,8 @@ Level level;
 uint8_t levelNumber = 0;
 uint8_t counter = 0;
 uint8_t resetLevelCounter = 0;
+bool showMessageYes = true;
+
 
 
 // ----------------------------------------------------------------------------------------------------------------------
@@ -38,6 +41,9 @@ void setup() {
   arduboy.setTextWrap(true);
   arduboy.setTextVertSpacing(9);
   arduboy.audio.begin();
+  
+  EEPROM_Utils::initEEPROM(false);
+  levelNumber = EEPROM_Utils::getLevel();
 
 }
 
@@ -63,7 +69,12 @@ void loop() {
         break;
 
     case GameState::LevelInit:
+    sound.noTone();
         LevelInit(levelNumber);
+
+    case GameState::LevelDisplay:
+        LevelDisplay();
+        break;
 
     case GameState::GamePlay:
         GamePlay();
@@ -78,7 +89,6 @@ void loop() {
   arduboy.display(CLEAR_BUFFER);
 
 }
-
 
 
 // --------------------------------------------------------------------------------------
@@ -108,6 +118,7 @@ void Intro() {
       case 61:
         resetLevelCounter = 0;
         arduboy.setRGBled(0, 0, 0);
+        EEPROM_Utils::initEEPROM(true);
         levelNumber = 0;
         return;
 
@@ -147,7 +158,47 @@ void LevelInit(uint8_t levelNumber) {
 
   }
 
-  gameState = GameState::GamePlay;
+  gameState = GameState::LevelDisplay;
   counter = COUNTER_DELAY_SHORT;
+
+}
+
+
+// --------------------------------------------------------------------------------------
+//  Display 'Level 99' banner prior to play ..
+//
+void LevelDisplay() {
+
+  Sprites::drawOverwrite(0, 0, pcb, 0);
+  renderCrossHatch(0);
+
+  arduboy.fillRect(23, 0, 81, 64, BLACK);
+  arduboy.fillRect(25, 0, 77, 10, WHITE);
+
+  font4x6.setCursor(28, 1);
+  font4x6.setTextColor(BLACK);
+  
+  font4x6.print("Level ");
+  font4x6.print(level.id / 10);
+  font4x6.print(level.id % 10);
+  font4x6.setTextColor(WHITE);
+
+  arduboy.drawVerticalDottedLine(0, 64, 25, WHITE);
+  arduboy.drawVerticalDottedLine(0, 64, 101, WHITE);
+  arduboy.drawHorizontalDottedLine(25, 101, 63, WHITE);
+
+  drawChallenges(32, 13);
+
+  if (counter > 0) counter--;
+
+  if (counter == 0) {
+  
+    font4x6.setCursor(57, 53);
+    font4x6.print("Press");
+    Sprites::drawSelfMasked(87, 53, aButton, 0);
+  
+  }
+
+  if (arduboy.justPressed(A_BUTTON)) {gameState = GameState::GamePlay; }
 
 }

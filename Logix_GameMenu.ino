@@ -8,6 +8,10 @@ uint8_t successCount = 0;
 const uint8_t y[] = { 4, 13, 22, 31, 43 };
 
 
+// ----------------------------------------------------------------------------------------------------------------------
+//  Play the Game!
+// ----------------------------------------------------------------------------------------------------------------------
+
 void GameMenu() {
 
   render();
@@ -61,8 +65,68 @@ void GameMenu() {
   font4x6.setTextColor(WHITE);
 
   switch (menuSelection1) {
-      
+
+    case 1:
+      {
+
+        if (successCount < 100) { successCount++; }
+
+        arduboy.setRGBled(0, 0, 0);
+        if (successCount > 0 && successCount < 16 && level.numberOfOutcomes >= 1)   { arduboy.setRGBled((!level.outcome[0].successful ? 32 : 0), (level.outcome[0].successful ? 32 : 0), 0); }
+        if (successCount > 32 && successCount < 48 && level.numberOfOutcomes >= 2)  { arduboy.setRGBled((!level.outcome[1].successful ? 32 : 0), (level.outcome[1].successful ? 32 : 0), 0); }
+        if (successCount > 64 && successCount < 80 && level.numberOfOutcomes >= 3)  { arduboy.setRGBled((!level.outcome[2].successful ? 32 : 0), (level.outcome[2].successful ? 32 : 0), 0); }
+
+        arduboy.fillRect(36, 8, 78, 57, BLACK); 
+        arduboy.drawRect(37, 9, 76, 55, WHITE); 
+        arduboy.drawHorizontalDottedLine(40, 110, 19, WHITE);
+        font4x6.setCursor(42, 10);
+        font4x6.print("Test Results ");
+
+        for (uint8_t x = 0; x < level.numberOfOutcomes; x++) {
+
+          font4x6.setCursor(43, 24 + (x * 13));
+          font4x6.print("Test ");
+          font4x6.print(x + 1);
+          font4x6.print(" ... ");
+
+          if (level.outcome[x].successful) {
+
+            Sprites::drawSelfMasked(96, 23 + (x * 13), smile, 0);
+
+          }
+          else {
+
+            Sprites::drawSelfMasked(96, 23 + (x * 13), frown, 0);
+
+          }
+
+        }
+
+        if (level.levelComplete()) {
+          
+          level.showMessage = true;    
+          selection.item = 0;
+
+        }
+
+      }
+
+      break;
+
     case 2:
+      {
+        arduboy.fillRect(36, 8, 78, 57, BLACK); 
+        arduboy.drawRect(37, 9, 76, 55, WHITE); 
+        arduboy.drawHorizontalDottedLine(40, 110, 19, WHITE);
+        font4x6.setCursor(42, 10);
+        font4x6.print("Level ");
+        font4x6.print(level.id / 10);
+        font4x6.print(level.id % 10);
+
+        drawChallenges(43, 23);
+
+      }
+
       break;
 
     case 3:
@@ -118,11 +182,6 @@ void GameMenu() {
       }
       break;
 
-      case 4:
-        menuSelection0 = 0;
-        menuSelection1 = 0;
-        gameState = GameState::IntroInit;
-        break;
   }
 
 
@@ -133,10 +192,11 @@ void GameMenu() {
   if (arduboy.justPressed(DOWN_BUTTON) && menuSelection0 < 4 && menuSelection1 == 0)    { menuSelection0++; }
   if (arduboy.justPressed(DOWN_BUTTON) && menuSelection1 == 3)                          { gateIndex--; if (gateIndex == ItemType::BLANK) gateIndex = ItemType::NOT; }
 
+  if (arduboy.justPressed(RIGHT_BUTTON) && menuSelection0 == 2 && menuSelection1 == 0)  { menuSelection1 = 2; }
   if (arduboy.justPressed(RIGHT_BUTTON) && menuSelection0 == 3 && menuSelection1 == 0)  { menuSelection1 = 3; }
-  if (arduboy.justPressed(LEFT_BUTTON) && menuSelection1 > 0)                           { menuSelection1 = 0; }
-  if (arduboy.justPressed(B_BUTTON) && menuSelection1 == 0)                             { gameState = GameState::GamePlay; selection.reset(); }
-  if (arduboy.justPressed(B_BUTTON) && menuSelection1 > 0)                              { menuSelection1 = 0; }
+  if (arduboy.justPressed(LEFT_BUTTON) && menuSelection1 > 0)                           { menuSelection1 = 0; arduboy.setRGBled(0, 0, 0); }
+  if (arduboy.justPressed(B_BUTTON) && menuSelection1 == 0)                             { selection.reset(); gameState = GameState::GamePlay; }
+  if (arduboy.justPressed(B_BUTTON) && menuSelection1 > 0)                              { menuSelection1 = 0; arduboy.setRGBled(0, 0, 0); }
 
   if (arduboy.justPressed(A_BUTTON)) {
 
@@ -147,8 +207,25 @@ void GameMenu() {
         gameState = GameState::GamePlay;
         break;
 
+      case 1:
+        successCount = 0;
+        test(&level, connectors);
+        sound.tones(level.levelComplete() ? success : fail);
+        menuSelection1 = 1;
+        break;
+
+      case 2:
+        menuSelection1 = 2;
+        break;
+
       case 3:
         menuSelection1 = 3;
+        break;
+
+      case 4:
+        menuSelection0 = 0;
+        menuSelection1 = 0;
+        gameState = GameState::IntroInit;
         break;
     
     }
@@ -158,21 +235,24 @@ void GameMenu() {
 }
 
 
+// --------------------------------------------------------------------------------------
+//  Render a single puzzle outcome line ..
+//
 void renderDataLine(uint8_t &start) {
 
-    font4x6.print(pgm_read_byte(&data[start++]));
+  font4x6.print(pgm_read_byte(&data[start++]));
+  font4x6.print(" ");
+
+  uint8_t x = pgm_read_byte(&data[start++]);
+
+  if (x < 2) {
+    font4x6.print(x);
+  }
+  else {
     font4x6.print(" ");
+  }
 
-    uint8_t x = pgm_read_byte(&data[start++]);
-
-    if (x < 2) {
-      font4x6.print(x);
-    }
-    else {
-      font4x6.print(" ");
-    }
-
-    font4x6.print(" ");
-    font4x6.print(pgm_read_byte(&data[start++]));
+  font4x6.print(" ");
+  font4x6.print(pgm_read_byte(&data[start++]));
 
 }
