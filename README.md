@@ -123,6 +123,8 @@ Finally, moving all switches to the up / high / on position turns the top two LE
 
 <a name="c"/>
 
+<br />
+
 
 ## A Walkthrough
 
@@ -135,6 +137,8 @@ Take the example puzzle below which involves one switch and one LED.  When the s
 
 <a name="d"/>
 
+<br />
+
 
 ### Highlighting a Square
 The selected element or gate can be changed by scrolling using the Up, Down, Left and Right buttons.  You can navigate to blank spots within the puzzle and add logic gates.  This is shown later on.
@@ -143,6 +147,8 @@ The selected element or gate can be changed by scrolling using the Up, Down, Lef
 <br />
 
 [Back to top](#toc)
+
+<br />
 
 <a name="e"/>
 
@@ -182,6 +188,8 @@ Repeat the process to connect the lower switch input to the negative rail.
 
 <a name="f"/>
 
+<br />
+
 
 ### Adding new Elements
 
@@ -216,6 +224,8 @@ Once the NOT gate is selected, the remainder of the wiring can be laid.  Wire th
 
 <a name="g"/>
 
+<br />
+
 
 ### Checking your Circuit
 
@@ -240,6 +250,8 @@ Our tests have shown that when the switch is on, the LED is off.  Conversely, wh
 [Back to top](#toc)
 
 <a name="h"/>
+
+<br />
 
 
 ### Completing the Puzzle
@@ -276,6 +288,8 @@ The ‘Back’ option will take you back to the game.  The ‘Quit’ option wil
 
 <a name="i"/>
 
+<br />
+
 
 ## Proceeding to the Next Puzzle
 
@@ -287,6 +301,8 @@ Once you have successfully completed the current puzzle, return to the game play
 [Back to top](#toc)
 
 <a name="j"/>
+
+<br />
 
 
 ## Other Hints and Tips
