@@ -323,7 +323,7 @@ Once you have successfully completed the current puzzle, return to the game play
 
    <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_20.png" width="256px">
 
-* Elements are wired from left to right – you cannot have a wire from an output loop back to the input of an element that to the left of the current element or in the same column.
+* Elements are wired from left to right – you cannot have a wire from an output loop back to the input of an element that is to the left of the current element or in the same column.
 
    <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_21.png" width="256px">
 
