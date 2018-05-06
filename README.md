@@ -90,7 +90,7 @@ Using combinations of logic gates, complex operations can be performed.
 Source https://whatis.techtarget.com
 <br />
 
-[Back to top](toc)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Back to top](#toc)
 
 ---
 
