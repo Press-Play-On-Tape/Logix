@@ -32,14 +32,12 @@ A logic gate is an elementary building block of a digital circuit. Most logic ga
 There are seven basic logic gates - AND, OR, XOR, NOT, NAND, NOR, and XNOR.  This game also utilises two additional gates, the Negative-AND and the Negative-OR which are also known as NEGAND and NEGOR respectively.
 <br />
 
----
 ### AND 
 The AND gate is so named because, if 0 is called "false" and 1 is called "true," the gate acts in the same way as the logical "and" operator. The following illustration and table show the circuit symbol and logic combinations for an AND gate. (In the symbol, the input terminals are at left and the output terminal is at right.) The output is "true" when both inputs are "true." Otherwise, the output is "false."
 
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Gates_01.png" width="225px">
 <br/>
 
----
 
 ### OR 
 The OR gate gets its name from the fact that it behaves after the fashion of the logical inclusive "or." The output is "true" if either or both of the inputs are "true." If both inputs are "false," then the output is "false."
@@ -47,7 +45,6 @@ The OR gate gets its name from the fact that it behaves after the fashion of the
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Gates_02.png" width="225px">
 <br/>
 
----
 
 ### XOR  
 The XOR (exclusive-OR) gate acts in the same way as the logical "either / or." The output is "true" if either, but not both, of the inputs are "true." The output is "false" if both inputs are "false" or if both inputs are "true." Another way of looking at this circuit is to observe that the output is 1 if the inputs are different, but 0 if the inputs are the same.
@@ -55,7 +52,6 @@ The XOR (exclusive-OR) gate acts in the same way as the logical "either / or." T
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Gates_03.png" width="225px">
 <br />
 
----
 
 ### NOT 
 A logical inverter, sometimes called a NOT gate to differentiate it from other types of electronic inverter devices, has only one input. It reverses the logic state.
@@ -63,7 +59,6 @@ A logical inverter, sometimes called a NOT gate to differentiate it from other t
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Gates_04.png" width="225px">
 <br />
 
----
 
 ### NAND 
 The NAND gate operates as an AND gate followed by a NOT gate. It acts in the manner of the logical operation "and" followed by negation. The output is "false" if both inputs are "true." Otherwise, the output is "true."
@@ -71,28 +66,24 @@ The NAND gate operates as an AND gate followed by a NOT gate. It acts in the man
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Gates_05.png" width="225px">
 <br/>
 
----
 ### NOR 
 The NOR gate is a combination OR gate followed by an inverter. Its output is "true" if both inputs are "false." Otherwise, the output is "false."
 
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Gates_06.png" width="225px">
 <br />
 
----
 ### XNOR 
 The XNOR (exclusive-NOR) gate is a combination XOR gate followed by an inverter. Its output is "true" if the inputs are the same, and"false" if the inputs are different.
 
 <img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Gates_07.png" width="225px">
 <br />
 
----
 Using combinations of logic gates, complex operations can be performed. 
 Source https://whatis.techtarget.com
 <br />
 
 [Back to top](#toc)
 
----
 
 <a name="b"/>
 
@@ -132,7 +123,6 @@ Finally, moving all switches to the up / high / on position turns the top two LE
 
 <a name="c"/>
 
----
 
 ## A Walkthrough
 
@@ -145,7 +135,6 @@ Take the example puzzle below which involves one switch and one LED.  When the s
 
 <a name="d"/>
 
----
 
 ### Highlighting a Square
 The selected element or gate can be changed by scrolling using the Up, Down, Left and Right buttons.  You can navigate to blank spots within the puzzle and add logic gates.  This is shown later on.
@@ -157,7 +146,6 @@ The selected element or gate can be changed by scrolling using the Up, Down, Lef
 
 <a name="e"/>
 
----
 
 ### Wiring Elements Together
 
@@ -194,7 +182,6 @@ Repeat the process to connect the lower switch input to the negative rail.
 
 <a name="f"/>
 
----
 
 ### Adding new Elements
 
@@ -229,7 +216,6 @@ Once the NOT gate is selected, the remainder of the wiring can be laid.  Wire th
 
 <a name="g"/>
 
----
 
 ### Checking your Circuit
 
@@ -255,7 +241,6 @@ Our tests have shown that when the switch is on, the LED is off.  Conversely, wh
 
 <a name="h"/>
 
----
 
 ### Completing the Puzzle
 
@@ -291,7 +276,6 @@ The ‘Back’ option will take you back to the game.  The ‘Quit’ option wil
 
 <a name="i"/>
 
----
 
 ## Proceeding to the Next Puzzle
 
@@ -304,7 +288,6 @@ Once you have successfully completed the current puzzle, return to the game play
 
 <a name="j"/>
 
----
 
 ## Other Hints and Tips
 
