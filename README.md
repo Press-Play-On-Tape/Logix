@@ -149,6 +149,8 @@ Take the example puzzle below which involves one switch and one LED.  When the s
 
 ### Highlighting a Square
 The selected element or gate can be changed by scrolling using the Up, Down, Left and Right buttons.  You can navigate to blank spots within the puzzle and add logic gates.  This is shown later on.
+
+<img src="https://raw.githubusercontent.com/filmote/Logix/master/distributable/Game_03.png" width="256px">
 <br />
 
 [Back to top](#toc)
