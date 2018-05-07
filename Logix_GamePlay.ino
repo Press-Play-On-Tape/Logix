@@ -111,6 +111,7 @@ void GamePlay_Normal() {
         selection.connector = (selection.connector + 1) % 3; 
 
         if (level.items[selection.item].type == ItemType::NOT && selection.connector == 1) selection.connector = 2;
+        if (level.items[selection.item].type == ItemType::LED) selection.connector = CONNECTOR_INPUT_A;
 
         selection.otherItem = NO_GATE_SELECTED; 
         currentConnector.reset();

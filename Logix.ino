@@ -23,6 +23,8 @@ Level level;
 uint8_t levelNumber = 0;
 uint8_t counter = 0;
 uint8_t resetLevelCounter = 0;
+uint8_t skipLevelCounter = 0;
+
 bool showMessageYes = true;
 
 
@@ -69,8 +71,9 @@ void loop() {
         break;
 
     case GameState::LevelInit:
-    sound.noTone();
+        sound.noTone();
         LevelInit(levelNumber);
+        // Drop through intended ..
 
     case GameState::LevelDisplay:
         LevelDisplay();
@@ -95,6 +98,8 @@ void loop() {
 //  Display introduction page and animation ..
 //
 void Intro() {
+
+  bool renderLevel = false;
 
   Sprites::drawOverwrite(0, 0, pcb, 0);
 
@@ -133,6 +138,75 @@ void Intro() {
       resetLevelCounter = 0;
 
     }
+    
+  }
+
+
+  // Skip levels ?
+
+  if (arduboy.pressed(LEFT_BUTTON) || arduboy.pressed(RIGHT_BUTTON)) {
+
+    skipLevelCounter++;
+
+    switch (skipLevelCounter) {
+
+      case 102 ... 139:
+        renderLevel = true;
+        break;    
+
+      case 80:
+      case 140:
+        if (arduboy.pressed(LEFT_BUTTON) && levelNumber > 0)                        levelNumber--;
+        if (arduboy.pressed(RIGHT_BUTTON) && levelNumber < NUMBER_OF_PUZZLES - 1)   levelNumber++;
+        EEPROM_Utils::setLevel(levelNumber);
+        renderLevel = true;
+        break;
+
+      case 81 ... 100:
+      case 141 ... 160:
+        arduboy.setRGBled(0, 0, 32);
+        renderLevel = true;
+        break;
+
+      case 101:
+        arduboy.setRGBled(0, 0, 0);
+        renderLevel = true;
+        break;
+
+      case 161:
+        skipLevelCounter = 101;
+        arduboy.setRGBled(0, 0, 0);
+        renderLevel = true;
+        break;
+
+    }
+
+  }
+  else {
+
+    if (skipLevelCounter > 0) {
+
+      renderLevel = true;
+      if ((arduboy.justReleased(LEFT_BUTTON) || arduboy.justReleased(RIGHT_BUTTON)))  skipLevelCounter = 0;
+
+    }
+    
+  }
+
+
+  // If render level ?
+
+  if (renderLevel) {
+
+    arduboy.fillRect(99, 0, 30, 8);
+    font4x6.setTextColor(BLACK);
+    font4x6.setCursor(101, 0);
+    font4x6.print(F("Lvl "));
+    font4x6.setCursor(117, 0);
+    font4x6.print((levelNumber + 1) / 10);
+    font4x6.print((levelNumber + 1) % 10);
+    font4x6.setTextColor(WHITE);
+    
     
   }
 

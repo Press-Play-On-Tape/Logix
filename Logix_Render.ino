@@ -142,7 +142,22 @@ void render() {
 
   if (displayConnectorSelect ) {
 
-    if (selection.item <= 8) { Sprites::drawExternalMask( 119, -1, connectorSelect, connectorSelect_mask, selection.connector + (level.items[selection.item].type == ItemType::NOT ? 3 : 0), 0); }
+    if (selection.item <= 11) { 
+
+      switch (level.items[selection.item].type) {
+
+        case ItemType::NOT:
+        case ItemType::LED:
+          Sprites::drawExternalMask( 119, -1, connectorSelect, connectorSelect_mask, selection.connector + 3, 0); 
+          break;
+
+        default:
+          Sprites::drawExternalMask( 119, -1, connectorSelect, connectorSelect_mask, selection.connector, 0); 
+          break;
+
+      }
+
+    }
 
   }
 
