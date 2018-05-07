@@ -26,6 +26,7 @@ uint8_t resetLevelCounter = 0;
 uint8_t skipLevelCounter = 0;
 
 bool showMessageYes = true;
+bool testBed = false;
 
 
 
@@ -72,7 +73,15 @@ void loop() {
 
     case GameState::LevelInit:
         sound.noTone();
-        LevelInit(levelNumber);
+
+        if (testBed) {
+          LevelInit(TEST_BED);
+          gameState = GameState::GamePlay;
+          break;
+        }
+        else {
+          LevelInit(levelNumber);
+        }
         // Drop through intended ..
 
     case GameState::LevelDisplay:
@@ -206,14 +215,14 @@ void Intro() {
     font4x6.print((levelNumber + 1) / 10);
     font4x6.print((levelNumber + 1) % 10);
     font4x6.setTextColor(WHITE);
-    
-    
+        
   }
 
 
   // Start game when user presses A button ..
 
-  if (arduboy.justPressed(A_BUTTON)) {gameState = GameState::LevelInit; }
+  if (arduboy.justPressed(A_BUTTON)) { testBed = false; gameState = GameState::LevelInit; }
+  if (arduboy.justPressed(B_BUTTON)) { testBed = true;  gameState = GameState::LevelInit; }
 
 }
 

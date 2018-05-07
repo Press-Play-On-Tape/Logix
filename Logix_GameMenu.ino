@@ -14,7 +14,7 @@ const uint8_t y[] = { 4, 13, 22, 31, 43 };
 
 void GameMenu() {
 
-  bool islevelWiredCompletely = islevelFullyWired(&level, connectors);
+  bool islevelWiredCompletely = (testBed ? false : islevelFullyWired(&level, connectors));
 
   if (!islevelWiredCompletely && menuSelection0 == 1) menuSelection0 = 0;
 
