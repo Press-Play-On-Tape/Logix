@@ -401,7 +401,7 @@ const uint8_t PROGMEM puzzle_17[] = { //NEGOR
 const uint8_t PROGMEM test_bed[] = { 
 
     static_cast<uint8_t>(ItemType::SWITCH_UP), static_cast<uint8_t>(ItemType::SWITCH_UP), static_cast<uint8_t>(ItemType::SWITCH_UP), 
-    static_cast<uint8_t>(ItemType::NOT), static_cast<uint8_t>(ItemType::NOT), static_cast<uint8_t>(ItemType::BLANK), 
+    static_cast<uint8_t>(ItemType::BLANK), static_cast<uint8_t>(ItemType::BLANK), static_cast<uint8_t>(ItemType::BLANK), 
     static_cast<uint8_t>(ItemType::BLANK), static_cast<uint8_t>(ItemType::BLANK), static_cast<uint8_t>(ItemType::BLANK), 
     static_cast<uint8_t>(ItemType::LED), static_cast<uint8_t>(ItemType::LED), static_cast<uint8_t>(ItemType::LED), 
 
