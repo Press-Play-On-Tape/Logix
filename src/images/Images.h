@@ -5,5 +5,6 @@
 #include "gamePlay.h"
 #include "logicGates.h"
 #include "menuItems.h"
+#include "Splash.h"
 
 

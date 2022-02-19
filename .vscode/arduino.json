@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:leonardo",
     "port": "/dev/cu.usbmodem1411",
-    "sketch": "Test.ino",
+    "sketch": "Logix.ino",
     "output": "../build"
 }

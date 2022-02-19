@@ -13,7 +13,7 @@ Arduboy2Ext arduboy;
 ArduboyTones sound(arduboy.audio.enabled);
 Font4x6 font4x6 = Font4x6(9);
 
-GameState gameState = GameState::IntroInit;
+GameState gameState = GameState::SplashScreen_Init;
 Connector connectors[NUMBER_OF_CONNECTORS];
 Connector currentConnector;
 Selection selection = {0, 0, NO_GATE_SELECTED, 0};
@@ -62,6 +62,17 @@ void loop() {
 
   switch (gameState) {
 
+    case GameState::SplashScreen_Init:
+        splashScreen_Init();
+        splashScreen();
+        arduboy.display(false);
+        break;
+
+    case GameState::SplashScreen:
+        splashScreen();
+        arduboy.display(false);
+        break;
+        
     case GameState::IntroInit:
         counter = COUNTER_DELAY;
         gameState = GameState::Intro;

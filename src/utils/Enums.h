@@ -58,7 +58,9 @@ enum class GameState : uint8_t {
   LevelDisplay,
   GamePlay,
   GameMenu,
-
+  SplashScreen_Init,
+  SplashScreen,
+  
 };
 
 
